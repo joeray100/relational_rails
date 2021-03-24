@@ -7,4 +7,7 @@ class PastriesController < ApplicationController
   def show
     @pastries = Pastry.find(params[:id])
   end
+
+  def new
+  end
 end
