@@ -1,3 +1,4 @@
 class Business < ApplicationRecord
-  has_many :employees, :dependent => :destroy
+  has_many :employees
+  validates_presence_of :name
 end

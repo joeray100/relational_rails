@@ -1,3 +1,4 @@
 class Bakery < ApplicationRecord
-  has_many :pastries, :dependent => :destroy
+  has_many :pastries
+  validates_presence_of :name
 end
