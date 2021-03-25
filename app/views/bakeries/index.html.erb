@@ -1,5 +1,11 @@
-<h1>Bakeries</h1>
+<h1>All Bakeries</h1>
 
-<% @bakeries.each do |bakery| %>
-<h2><%= bakery.name %></h2>
-<% end %>
+<ul id="bakeries">
+  <% @bakeries.each do |bakery| %>
+    <li>
+      <%= link_to bakery.name, bakery_path(bakery) %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "Create a New Bakery", new_bakery_path, class: "new-bakery" %>
