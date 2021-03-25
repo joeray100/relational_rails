@@ -242,7 +242,11 @@
         "lines": [
           1,
           1,
+          1,
+          1,
           null,
+          1,
+          1,
           null,
           1,
           1,
@@ -259,7 +263,34 @@
           null
         ]
       },
-      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/business/user_sees_all_businesses_spec.rb": {
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/bakery/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/business/index_spec.rb": {
         "lines": [
           1,
           null,
@@ -267,13 +298,158 @@
           1,
           1,
           1,
-          1,
           null,
           1,
           null,
           1,
           1,
           null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/business/show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/employees/employee_index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/employees/employee_show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/pastries/pastry_index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/pastries/pastry_show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
           null,
           null
         ]
@@ -284,6 +460,7 @@
           null,
           1,
           1,
+          2,
           2,
           null,
           null
@@ -331,7 +508,7 @@
           null,
           null,
           1,
-          0,
+          2,
           null,
           null,
           1,
@@ -357,12 +534,60 @@
           null,
           null,
           1,
-          0,
+          4,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/models/employee.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/controllers/employees_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/models/pastry.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/controllers/pastries_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          2,
+          null,
+          null,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1616706349
+    "timestamp": 1616712619
   }
 }
