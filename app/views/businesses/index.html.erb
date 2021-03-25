@@ -3,9 +3,9 @@
 <ul id="businesses">
   <% @businesses.each do |business| %>
     <li>
-      <%= link_to businesses.name, businesses_path(business) %>
+      <%= link_to business.name, businesses_path(business) %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "Create a New Business", new_businesses_path, class: "new-business" %>
+<%= link_to "Create a New Business", class: "new-business" %>

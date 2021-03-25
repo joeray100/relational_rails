@@ -3,9 +3,9 @@
 <ul id="bakeries">
   <% @bakeries.each do |bakery| %>
     <li>
-      <%= link_to bakery.name, bakery_path(bakery) %>
+      <%= link_to bakery.name, bakeries_path(bakery) %>
     </li>
   <% end %>
 </ul>
 
-<%= link_to "Create a New Bakery", new_bakery_path, class: "new-bakery" %>
+<%= link_to "Create a New Bakery", class: "new-bakery" %>
