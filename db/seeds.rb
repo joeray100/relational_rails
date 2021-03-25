@@ -1,10 +1,10 @@
-Bakery.destory_all
-Business.destory_all
-Employee.destory_all
+Bakery.destroy_all
+Business.destroy_all
+Employee.destroy_all
 Pastry.destroy_all
 
 sherry = Bakery.create!(name: "Sherry's Tasty Desserts", rank: 1, open: true)
-joe    = Bakery.create!(name: "Joe's Patissiere" rank: 2, open: false)
+joe    = Bakery.create!(name: "Joe's Patissiere", rank: 2, open: false)
 goody  = Bakery.create!(name: "Gluten Free Goodies", rank: 3, open: false)
 bread  = Bakery.create!(name: "Knead Bread",  rank: 4, open: true )
 
