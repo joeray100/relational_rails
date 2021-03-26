@@ -1,0 +1,8 @@
+<h1>Employees</h1>
+
+<% @employees.each do |employee| %>
+  <h3>name: <%= employee.name %></h3>
+  <h4>hours worked: <%= employee.hours_worked %></h4>
+  <h4>likes job<%= employee.likes_job%></h4>
+  <p>---------</p>
+<% end %>
