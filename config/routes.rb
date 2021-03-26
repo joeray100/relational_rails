@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/bakeries/:id/pastries', to: 'pastries#index'
 
   get '/pastries/:id', to: 'pastries#show'
+  get '/pastries', to: 'pastries#index'
 end
