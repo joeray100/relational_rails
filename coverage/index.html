@@ -14,7 +14,8 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-26T10:38:39-04:00">2021-03-26T10:38:39-04:00</abbr></div>
+
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-26T08:10:32-06:00">2021-03-26T08:10:32-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -23,14 +24,14 @@
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
       <span class="green">
-  95.93%
+  99.49%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.03
+         1.04
        </span>
     </span> hits/line
     )
@@ -43,11 +44,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>221</b> relevant lines,
-    <span class="green"><b>212</b> lines covered</span> and
-    <span class="red"><b>9</b> lines missed. </span>
+    <b>197</b> relevant lines,
+    <span class="green"><b>196</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed. </span>
     (<span class="green">
-  95.93%
+  99.49%
 </span>
 )
   </div>
@@ -95,11 +96,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#2272f0ae5f5a2597a322594a9c2d85cfab696b2a" class="src_link" title="app/controllers/businesses_controller.rb">app/controllers/businesses_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">14</td>
-            <td class="cell--number">6</td>
-            <td class="cell--number">6</td>
+            <td class="cell--number">10</td>
+            <td class="cell--number">5</td>
+            <td class="cell--number">5</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.33</td>
+            <td class="cell--number">1.40</td>
             
           </tr>
         
@@ -160,12 +161,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#dfa78211a516f84fe67ea955e43a03ab6b00a3b5" class="src_link" title="app/models/business.rb">app/models/business.rb</a></td>
-            <td class="red strong cell--number t-file__coverage">66.67 %</td>
-            <td class="cell--number">11</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">6</td>
-            <td class="cell--number">4</td>
-            <td class="cell--number">2</td>
-            <td class="cell--number">0.67</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">3</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -337,9 +338,9 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#f5e5ad91d04c534c180514d3c7e4d34efa6f377d" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">13</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">9</td>
+            <td class="cell--number">16</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -381,12 +382,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#0ce574438467eb11f4a62034bb79e7c95db733d7" class="src_link" title="spec/features/business/index_spec.rb">spec/features/business/index_spec.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">94.12 %</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">27</td>
             <td class="cell--number">17</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">0.94</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -725,8 +726,8 @@
     
 
     <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>5</b> relevant lines.
+      <span class="green"><b>5</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -766,7 +767,7 @@
 
             
 
-            <code class="ruby">    @businesses = Business.all</code>
+            <code class="ruby">    @businesses = Business.order(created_at: :desc)</code>
           </li>
         </div>
       
@@ -837,51 +838,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="10">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def create</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
+          <li class="never" data-hits="" data-linenumber="10">
             
             
 
@@ -1462,8 +1419,8 @@
   <div class="header">
     <h3>app/models/business.rb</h3>
     <h4>
-      <span class="red">
-  66.67%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -1472,9 +1429,9 @@
     
 
     <div class="t-line-summary">
-      <b>6</b> relevant lines.
-      <span class="green"><b>4</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>3</b> relevant lines.
+      <span class="green"><b>3</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -1529,51 +1486,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="5">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def recently_created</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">    require &#39;pry&#39;; binding.pry</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="missed" data-hits="0" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby">    Bussiness.updated_at.first</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="8">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
@@ -1584,18 +1497,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
+          <li class="never" data-hits="" data-linenumber="6">
             
             
 
@@ -4190,9 +4092,8 @@
     
 
     <div class="t-line-summary">
-
-      <b>9</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -4226,13 +4127,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="3">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="3">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  # get &#39;/businesses&#39;, to: &#39;businesses#create&#39;</code>
+            
+
+            <code class="ruby">  get &#39;/businesses&#39;, to: &#39;businesses#create&#39;</code>
           </li>
         </div>
       
@@ -5297,7 +5198,7 @@
     <h3>spec/features/business/index_spec.rb</h3>
     <h4>
       <span class="green">
-  94.12%
+  100.0%
 </span>
 
       lines covered
@@ -5307,8 +5208,8 @@
 
     <div class="t-line-summary">
       <b>17</b> relevant lines.
-      <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <span class="green"><b>17</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -5583,8 +5484,8 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="25">
-            
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
             
 
             
