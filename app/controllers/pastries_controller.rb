@@ -1,8 +1,7 @@
 class PastriesController < ApplicationController
 
   def index
-    @bakery = Bakery.find(params[:id])
-    @pastries = @bakery.pastries.all
+    @pastries = Pastry.all
   end
 
   def show
@@ -11,5 +10,10 @@ class PastriesController < ApplicationController
   end
 
   def new
+  end
+
+  def pastry_index
+    @bakery = Bakery.find(params[:id])
+    @pastries = @bakery.pastries.all
   end
 end
