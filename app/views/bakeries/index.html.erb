@@ -4,6 +4,7 @@
   <% @bakeries.each do |bakery| %>
     <li>
       <%= link_to bakery.name, bakeries_path(bakery) %>
+      <%=bakery.created_at%>
     </li>
   <% end %>
 </ul>

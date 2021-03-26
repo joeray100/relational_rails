@@ -247,24 +247,79 @@
           null,
           null,
           1,
-          1,
           null,
           1,
           1,
           1,
           null,
-          1,
           1,
           null
         ]
       },
-      "/Users/rayj/turing/Mod_2/projects/relational_rails/app/helpers/application_helper.rb": {
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/Users/rayj/turing/Mod_2/projects/relational_rails/spec/features/bakery/show_spec.rb": {
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/Bakeries-Pastries/bakeries_pastries_show_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/bakery/bakery_index_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/spec/features/bakery/bakery_show_spec.rb": {
         "lines": [
           1,
           null,
@@ -287,6 +342,10 @@
           1,
           1,
           1,
+          null,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -387,12 +446,12 @@
           1,
           null,
           1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
           null,
           null
         ]
@@ -524,22 +583,28 @@
           null
         ]
       },
-      "/Users/rayj/turing/Mod_2/projects/relational_rails/app/controllers/bakeries_controller.rb": {
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/models/pastry.rb": {
         "lines": [
           1,
           1,
+          null
+        ]
+      },
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/controllers/pastries_controller.rb": {
+        "lines": [
           1,
           null,
-          null,
           1,
-          2,
-          null,
-          null,
-          1,
+          4,
+          4,
           null,
           null,
           1,
           0,
+          0,
+          null,
+          null,
+          1,
           null,
           null
         ]
@@ -550,61 +615,51 @@
           null
         ]
       },
-      "/Users/rayj/turing/Mod_2/projects/relational_rails/app/controllers/businesses_controller.rb": {
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/controllers/bakeries_controller.rb": {
         "lines": [
           1,
           1,
           2,
+
           null,
           null,
           1,
-          2,
+          3,
           null,
           null,
           1,
-          null,
           null,
           null,
           null
         ]
       },
-      "/Users/rayj/turing/Mod_2/projects/relational_rails/app/models/employee.rb": {
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/controllers/businesses_controller.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          4,
+          null,
+          null
+        ]
+      },
+
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/models/employee.rb": {
         "lines": [
           1,
           1,
           null
         ]
       },
-      "/Users/rayj/turing/Mod_2/projects/relational_rails/app/controllers/employees_controller.rb": {
+      "/Users/olivia/turing/Mod-2/projects/relational_rails/app/controllers/employees_controller.rb": {
         "lines": [
           1,
           null,
           1,
-          1,
-          null,
-          null,
-          1,
-          2,
-          null,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/rayj/turing/Mod_2/projects/relational_rails/app/models/pastry.rb": {
-        "lines": [
-          1,
-          1,
-          null
-        ]
-      },
-      "/Users/rayj/turing/Mod_2/projects/relational_rails/app/controllers/pastries_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
+          0,
           null,
           null,
           1,
@@ -617,6 +672,7 @@
         ]
       }
     },
-    "timestamp": 1616716645
+    "timestamp": 1616769518
+
   }
 }
