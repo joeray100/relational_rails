@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 # As a visitor
-# When I visit '/child_table_name'
-# Then I see each Child in the system including the Child's attributes:
-describe "Show child table" do
-    it "shows the entire child table with attributes" do
+# When I visit '/parents/:parent_id/child_table_name'
+# Then I see each Child that is associated with that Parent with each Child's attributes:
+
+describe "Bakeries Pastries index" do
+  it "display all pastries related to a bakery" do
     bakery1 = Bakery.create!(name: "Name 1", rank: 1, open: true)
     cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
     bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)

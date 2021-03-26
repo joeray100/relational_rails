@@ -21,3 +21,7 @@ describe "bakeries show id" do
     expect(page).to have_content(bakery_2.open)
  end
 end
+
+# As a visitor
+# When I visit a parent's show page
+# I see a count of the number of children associated with this parent

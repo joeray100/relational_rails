@@ -1,6 +1,6 @@
 class BakeriesController < ApplicationController
   def index
-    @bakeries = Bakery.all
+    @bakeries = Bakery.order("created_at DESC")
   end
 
   def show
@@ -10,7 +10,4 @@ class BakeriesController < ApplicationController
   def new
   end
 
-  def pastries
-    @pastries = Pastry.find(params[:id])
-  end
 end
