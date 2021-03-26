@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get '/businesses', to: 'businesses#index'
+  get '/businesses', to: 'businesses#create'
   get '/businesses/:id', to: 'businesses#show'
   get 'businesses/:id/employees', to: 'employees#index'
 

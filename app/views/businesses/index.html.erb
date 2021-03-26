@@ -4,6 +4,7 @@
   <% @businesses.each do |business| %>
     <li>
       <%= link_to business.name, businesses_path(business) %>
+      <%= link_to business.updated_at, businesses_path(business) %>
     </li>
   <% end %>
 </ul>
