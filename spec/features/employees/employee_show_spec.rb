@@ -8,12 +8,12 @@ describe "Show child table" do
     bob = business1.employees.create!(name: "Bob", hours_worked: 4, likes_job: true)
     george = business1.employees.create!(name: "George", hours_worked: 7, likes_job: false)
 
-    visit "/employees/#{bob.id}"
+    visit "/businesses/#{business1.id}/employees"
     expect(page). to have_content(bob.name)
     expect(page). to have_content(bob.hours_worked)
     expect(page). to have_content(bob.likes_job)
-    
-    visit "/employees/#{george.id}"
+
+    visit "/businesses/#{business1.id}/employees"
     expect(page). to have_content(george.name)
     expect(page). to have_content(george.hours_worked)
     expect(page). to have_content(george.likes_job)
