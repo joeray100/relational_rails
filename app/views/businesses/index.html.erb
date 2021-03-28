@@ -8,12 +8,10 @@
 <ul id="businesses">
   <% @businesses.each do |business| %>
     <li>
-      <%= link_to business.name, businesses_path(business) %>
-      <%= link_to business.updated_at, businesses_path(business) %>
+      <a href="/businesses/<%=business.id %>"><%=business.name%></a>
+      <%=business.created_at%>
     </li>
   <% end %>
 </ul>
 
 <%= link_to "Create a New Business", class: "new-business" %><br><br>
-
-<a href="/employees">Employees Link</a><br>
