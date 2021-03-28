@@ -23,12 +23,13 @@ describe "Show child table" do
 # Then I see a link at the top of the page that takes me to the Child Index
   describe "Visit any page" do
     it "Shows a link at the top of the page that takes me to a child index" do
-    bakery1 = Bakery.create!(name: "Name 1", rank: 1, open: true)
-    cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
-    bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
+
+
 
     visit "/pastries"
-    expect(page).to have_content("/bakeries")
+    expect(page).to have_link("Employees")
+    expect(page).to have_link("Businesses")
+    expect(page).to have_link("Bakeries")
     end
   end
 end

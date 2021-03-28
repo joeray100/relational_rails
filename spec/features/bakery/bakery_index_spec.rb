@@ -4,7 +4,7 @@ require "rails_helper"
 # When I visit '/parents'
 # Then I see the name of each parent record in the system
 
-  RSpec.describe "bakeries index" do
+  describe "bakeries index" do
     before :each do
       @bakery_1 = Bakery.create!(name: "Name 1", rank: 1, open: true)
       @bakery_2 = Bakery.create!(name: "Name 2", rank: 2, open: true)
@@ -30,5 +30,13 @@ require "rails_helper"
       expect(page).to have_content(@bakery_2.name)
       expect(page).to have_content(@bakery_2.created_at)
     end
+  end
+
+  it "Shows a link at the top of the page that takes me to a child index" do
+
+    visit "/bakeries"
+    expect(page).to have_link("Businesses")
+    expect(page).to have_link("Pastries")
+    expect(page).to have_link("Employees")
   end
 end
