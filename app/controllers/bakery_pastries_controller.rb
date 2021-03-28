@@ -3,4 +3,7 @@ class BakeryPastriesController < ApplicationController
     @bakery = Bakery.find(params[:id])
     @pastries = @bakery.pastries
   end
+
+  def show
+  end
 end
