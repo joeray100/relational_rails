@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   get '/bakeries', to: 'bakeries#index'
   get '/bakeries/:id', to: 'bakeries#show'
-  get '/bakeries/:id/pastries', to: 'pastries#index'
+  get '/bakeries/:id/pastries', to: 'bakery_pastries#index'
 
   get '/pastries/:id', to: 'pastries#show'
   get '/pastries', to: 'pastries#index'
