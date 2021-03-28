@@ -8,14 +8,14 @@ describe "Show child with id" do
     cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
     bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
 
-    visit "/bakeries/#{bakery1.id}/pastries"
+    visit "/pastries/#{cake.id}"
     expect(page). to have_content(cake.name)
     expect(page). to have_content(cake.price)
     expect(page). to have_content(cake.gluten_free)
 
-    visit "/bakeries/#{bakery1.id}/pastries"
-    expect(page). to have_content(bread.name)
-    expect(page). to have_content(bread.price)
-    expect(page). to have_content(bread.gluten_free)
+    # visit "/bakeries/#{bakery1.id}/pastries"
+    # expect(page). to have_content(bread.name)
+    # expect(page). to have_content(bread.price)
+    # expect(page). to have_content(bread.gluten_free)
   end
 end

@@ -9,7 +9,7 @@
 <ul id="bakeries">
   <% @bakeries.each do |bakery| %>
     <li>
-      <%= link_to bakery.name, bakeries_path(bakery) %>
+      <a href="/bakeries/<%=bakery.id %>"><%=bakery.name%></a>
       <%=bakery.created_at%>
     </li>
   <% end %>

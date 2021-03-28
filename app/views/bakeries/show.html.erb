@@ -1,8 +1,7 @@
 
-<a href=":id/pastries">Pastries</a>
-<h1>Bakery Information</h1>
+<a href="/bakeries/<%=@bakeries.id %>/pastries">Menu</a>
+<h1><%= @bakeries.name %></h1>
 
 <li>Menu Count:<%=@bakeries.pastries.count%></li><br>
-<li>Name:  <%=@bakeries.name%></li><br>
 <li>Rank:  <%=@bakeries.rank%></li><br>
 <li>Open:  <%=@bakeries.open%></li><br>

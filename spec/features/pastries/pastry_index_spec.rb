@@ -9,7 +9,7 @@ describe "Show child table" do
     cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
     bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
 
-    visit "/bakeries/#{bakery1.id}/pastries"
+    visit "/pastries"
     expect(page). to have_content(cake.name)
     expect(page). to have_content(cake.price)
     expect(page). to have_content(cake.gluten_free)
@@ -21,14 +21,14 @@ describe "Show child table" do
 # As a visitor
 # When I visit any page on the site
 # Then I see a link at the top of the page that takes me to the Child Index
-describe "Visit any page" do
-  it "Shows a link at the top of the page that takes me to a child index" do
-  bakery1 = Bakery.create!(name: "Name 1", rank: 1, open: true)
-  cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
-  bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
+  describe "Visit any page" do
+    it "Shows a link at the top of the page that takes me to a child index" do
+    bakery1 = Bakery.create!(name: "Name 1", rank: 1, open: true)
+    cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
+    bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
 
-  visit "/bakeries"
-  
-end
-end
+    visit "/pastries"
+    expect(page).to have_content("/bakeries")
+    end
+  end
 end
