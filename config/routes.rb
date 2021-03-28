@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get '/businesses', to: 'businesses#index'
   get '/businesses/:id', to: 'businesses#show'
   get '/businesses/:id', to: 'employees#show'
-  get '/businesses/:id/employees', to: 'employees#index'
+  get '/businesses/:id/employees', to: 'business_employees#index'
 
   get '/employees/:id', to: 'employees#show'
   get '/employees', to: 'employees#index'

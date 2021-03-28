@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe "they visit /businesses" do
+describe "they visit businesses" do
   it "displays all businesses" do
     business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
     business_2 = Business.create!(name: "Name 2", rank: 1, big_company: false)
@@ -12,7 +12,7 @@ describe "they visit /businesses" do
   end
 end
 
-describe "they visit /businesses" do
+describe "they visit businesses" do
   it "displays businesses by created_at" do
     business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
     business_2 = Business.create!(name: "Name 2", rank: 1, big_company: false)
@@ -25,8 +25,18 @@ describe "they visit /businesses" do
     expect(page).to have_content(business_2.created_at)
   end
 
+  it "returns businesses in the order they were created at" do
+
+    visit '/businesses'
+    business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
+    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: false)
+    all = Business.all
+
+    assert_operator all.index(business_2), :<, all.index(business_1)
+  end
+
   it "Shows a link at the top of the page that takes me to a child index" do
-    
+
     visit "/businesses"
     expect(page).to have_link("Employees")
     expect(page).to have_link("Pastries")
