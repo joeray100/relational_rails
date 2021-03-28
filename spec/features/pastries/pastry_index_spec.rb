@@ -24,8 +24,6 @@ describe "Show child table" do
   describe "Visit any page" do
     it "Shows a link at the top of the page that takes me to a child index" do
 
-
-
     visit "/pastries"
     expect(page).to have_link("Employees")
     expect(page).to have_link("Businesses")

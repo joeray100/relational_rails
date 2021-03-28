@@ -32,6 +32,6 @@ end
       bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
 
       visit "/bakeries/#{bakery1.id}"
-      expect(page). to have_content(bakery1.pastries.count)
+      expect(page).to have_content(bakery1.pastries.count)
   end
 end
