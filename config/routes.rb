@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/employees/:id', to: 'employees#show'
   get '/employees', to: 'employees#index'
 
+  get '/bakeries/new', to: 'bakeries#new'
   get '/bakeries', to: 'bakeries#index'
   get '/bakeries/:id', to: 'bakeries#show'
   get '/bakeries/:id/pastries', to: 'bakery_pastries#index'

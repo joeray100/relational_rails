@@ -8,5 +8,6 @@ class BakeriesController < ApplicationController
   end
 
   def new
+    @bakeries = Bakery.new
   end
 end
