@@ -1,5 +1,9 @@
 <%= form_with url: "/bakeries", method: :post, local: true do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.submit 'Create Bakery' %>
+  <%= form.label :name %><br>
+  <%= form.text_field :name %><br>
+  <%= form.label :open %><br>
+  <%= form.text_field :open %><br>
+  <%= form.label :rank %><br>
+  <%= form.text_field :rank %><br>
+  <%= form.submit 'Create Artist' %><br>
 <% end %>
