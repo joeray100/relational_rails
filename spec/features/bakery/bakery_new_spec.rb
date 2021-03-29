@@ -10,6 +10,8 @@
           expect(current_path).to eq('/bakeries/new')
 
           fill_in 'Name', with: 'Jamisons Donuts'
+          fill_in 'Rank', with: 7
+          fill_in 'Open', with: true
           click_on 'Create Bakery'
 
           expect(current_path).to eq("/bakeries")
