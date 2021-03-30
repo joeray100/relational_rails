@@ -1,3 +1,10 @@
 <h1>Edit</h1>
-
-<!-- <h2><%=@bakery.name %>></h2> -->
+<%= form_with url: "/bakeries/#{@bakery.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br><br>
+  <%= form.label :rank%>
+  <%= form.text_field :rank %><br><br>
+  <%= form.label :open%>
+  <%= form.text_field :open%><br><br>
+  <%= form.submit 'Update' %>
+<% end %>

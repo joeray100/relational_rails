@@ -18,26 +18,30 @@ class BakeriesController < ApplicationController
     redirect_to '/bakeries'
   end
 
-  private
-
-  def bakery_params
-    params.require(:bakery).permit(:name, :rank, :open)
-  end
-
   def edit
-    @bakeries = Bakery.find(params[:id])
+    @bakery = Bakery.find(params[:id])
   end
 
   def update
-    @bakeries.Bakery.find(bakery_params)
-    @bakeries.update
-    @bakeries.save
-    redirect_to '/bakeries/:id'
+    bakery = Bakery.find(params[:id])
+    bakery.update(update_params)
+    bakery.save!
+    redirect_to "/bakeries/#{bakery.id}"
   end
 
   def destroy
     @bakery = Bakery.find(params[:id])
     @bakery.destroy
     redirect_to '/bakeries'
+  end
+
+  private
+
+  def bakery_params
+    params.require(:bakery).permit(:name, :rank, :open)
+  end
+
+  def update_params
+    params.permit(:name, :rank, :open)
   end
 end

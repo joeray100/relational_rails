@@ -8,24 +8,27 @@ require "rails_helper"
 # Then a `PATCH` request is sent to '/parents/:id',
 # the parent's info is updated,
 # and I am redirected to the Parent's Show page where I see the parent's updated info
-describe "user updates an existing bakery" do
-  describe "they link from the bakeries/:id index" do
-    describe "they fill in the appropriate fields" do
-      it "updates a bakery" do
-        @stellas = Bakery.create!(name: "Stella's Saltwater Taffy", rank: 8, open: true)
-        visit "/bakeries/#{@stellas.id}/"
-        click_link "Update Bakery"
+RSpec.describe 'New Bakery' do
+  describe 'As a visitor' do
+    describe 'When I visit the bakeries index' do
+      it 'I can update a bakery' do
+        candy = Bakery.create!(name: 'Crazy Candy', rank: 3, open: true)
 
-        expect(current_path).to eq("/bakeries/#{@stellas.id}/edit")
+        visit "/bakeries/#{candy.id}"
 
-        fill_in "bakery[name]", with: "Stellas Candy"
-        # fill_in "bakery[rank]", with:
-        # fill_in "bakery[open]", with:
-        click_on "Update Bakery"
+        click_link 'Edit Bakery'
 
+        expect(current_path).to eq("/bakeries/#{candy.id}/edit")
 
-        expect(page).to have_content("Stellas Candy")
-        expect(page).to_not have_content("Stella's Saltwater Taffy")
+        fill_in 'Name', with: 'No Candy'
+        fill_in 'Rank', with: 2
+        fill_in 'Open', with: false
+        click_on 'Update'
+
+        expect(current_path).to eq("/bakeries/#{candy.id}")
+        expect(page).to have_content('No Candy')
+        expect(page).to have_content(2)
+        expect(page).to have_content(false)
       end
     end
   end

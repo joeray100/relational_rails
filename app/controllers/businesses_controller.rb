@@ -19,14 +19,20 @@ class BusinessesController < ApplicationController
   end
 
   def edit
-    @businesses = Business.all
+    @business = Business.find(params[:id])
   end
 
   def update
-    @business.Business.find(params[:id])
-    @business.update
-    @business.save
-    redirect_to '/business/:id'
+    business =Business.find(params[:id])
+    business.update(update_params)
+    business.save!
+    redirect_to "/businesses/#{business.id}"
+  end
+
+  def destroy
+    @business = Business.find(params[:id])
+    @business.destroy
+    redirect_to '/businesses'
   end
 
   private
@@ -35,10 +41,7 @@ class BusinessesController < ApplicationController
     params.require(:business).permit(:name, :rank, :big_company)
   end
 
-
-  def destroy
-    @business = Business.find(params[:id])
-    @business.destroy
-    redirect_to '/businesses'
+  def update_params
+    params.permit(:name, :rank, :big_company)
   end
 end
