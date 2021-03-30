@@ -10,4 +10,17 @@ class BakeriesController < ApplicationController
   def new
     @bakeries = Bakery.new
   end
+
+  def create
+    @bakery = Bakery.new(bakery_params)
+    @bakery.save
+
+    redirect_to '/bakeries'
+  end
+
+  private
+
+  def bakery_params
+    params.require(:bakery).permit(:name, :rank, :open)
+  end
 end

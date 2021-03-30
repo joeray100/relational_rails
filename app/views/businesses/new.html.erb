@@ -1,6 +1,6 @@
-<%= form_for(@bakeries) do |f| %>
+<%= form_for(@businesses) do |f| %>
 <ul>
-  <% @bakeries.errors.full_messages.each do |error| %>
+  <% @businesses.errors.full_messages.each do |error| %>
   <li><%= error %></li>
   <% end %>
 </ul>
@@ -12,8 +12,8 @@
   <%= f.label :rank %><br />
   <%= f.number_field :rank %>
 </p>
-  <%= f.label :open %><br />
-  <%= f.text_field :open %>
+  <%= f.label :big_company %><br />
+  <%= f.text_field :big_company %>
 <p>
   <%= f.submit %>
 </p>
