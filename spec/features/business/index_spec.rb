@@ -32,7 +32,7 @@ describe "they visit businesses" do
     business_2 = Business.create!(name: "Name 2", rank: 1, big_company: false)
     all = Business.all
 
-    assert_operator all.index(business_2), :<, all.index(business_1)
+    assert_operator all.index(business_2), :>, all.index(business_1)
   end
 
   it "Shows a link at the top of the page that takes me to a child index" do

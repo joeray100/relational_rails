@@ -1,6 +1,6 @@
 class BakeriesController < ApplicationController
   def index
-    @bakeries = Bakery.order("created_at DESC")
+    @bakeries = Bakery.order(created_at: :desc)
   end
 
   def show
@@ -13,7 +13,7 @@ class BakeriesController < ApplicationController
 
   def create
     @bakery = Bakery.new(bakery_params)
-    @bakery.save
+    @bakery.save!
 
     redirect_to '/bakeries'
   end
@@ -22,5 +22,22 @@ class BakeriesController < ApplicationController
 
   def bakery_params
     params.require(:bakery).permit(:name, :rank, :open)
+  end
+
+  def edit
+    @bakeries = Bakery.find(params[:id])
+  end
+
+  def update
+    @bakeries.Bakery.find(bakery_params)
+    @bakeries.update
+    @bakeries.save
+    redirect_to '/bakeries/:id'
+  end
+
+  def destroy
+    @bakery = Bakery.find(params[:id])
+    @bakery.destroy
+    redirect_to '/bakeries'
   end
 end
