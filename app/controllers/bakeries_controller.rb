@@ -13,7 +13,7 @@ class BakeriesController < ApplicationController
 
   def create
     @bakery = Bakery.new(bakery_params)
-    @bakery.save
+    @bakery.save!
 
     redirect_to '/bakeries'
   end
@@ -25,14 +25,14 @@ class BakeriesController < ApplicationController
   end
 
   def edit
-    @bakeries.Bakery.all
+    @bakeries = Bakery.find(params[:id])
   end
 
   def update
-    @bakery.Bakery.find(params[:id])
-    @bakery.update
-    @bakery.save
-    redirect_to '/bakeries'
+    @bakeries.Bakery.find(bakery_params)
+    @bakeries.update
+    @bakeries.save
+    redirect_to '/bakeries/:id'
   end
 
   def destroy

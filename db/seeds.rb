@@ -2,6 +2,10 @@ Bakery.destroy_all
 Business.destroy_all
 Employee.destroy_all
 Pastry.destroy_all
+Bakery.destroy_all
+Business.destroy_all
+Employee.destroy_all
+Pastry.destroy_all
 
 sherry = Bakery.create!(name: "Sherry's Tasty Desserts", rank: 1, open: true)
 joe    = Bakery.create!(name: "Joe's Patissiere", rank: 2, open: false)
@@ -30,6 +34,7 @@ sea  = Business.create!(name: "Sea Shanty Bangers", rank: 2, big_company: false)
 yeet.employees.create!(name: "Ruth Bader Ginesburg", hours_worked: 8, likes_job: true)
 yeet.employees.create!(name: "The Notorious BIG", hours_worked: 8, likes_job: true)
 yeet.employees.create!(name: "Snoop Dogg", hours_worked: 8, likes_job: true)
+yeet.employees.create!(name: "Martha Stewart", hours_worked: 8, likes_job: true)
 
 sea.employees.create!(name: "Hamish McDonald", hours_worked: 12, likes_job: true)
 sea.employees.create!(name: "Angus McLeod", hours_worked: 4, likes_job: false)

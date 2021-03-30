@@ -1,13 +1,1 @@
 <h1>Edit an Business</h1>
-
-<%= form_with (url: "/businesses/#{@businesses.id}/edit", method: "patch") do |form| %>
-  <%= form.label :name %>
-  <%= form.text_field :name %>
-  <%= form.label :rank %>
-  <%= form.number_field :rank %>
-  <%= form.label :big_company, true %>
-  <%= form.check_box :big_company %>
-  <%= form.label :big_company, false %>
-  <%= form.check_box :big_company %>
-  <%= form.submit "Update Business" %>
-<% end %>

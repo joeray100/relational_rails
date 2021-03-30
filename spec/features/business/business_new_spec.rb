@@ -9,15 +9,13 @@ describe "user creates a new business" do
 
         expect(current_path).to eq('/businesses/new')
 
-        fill_in "business[name]", with: "New Name"
+        fill_in "business[name]", with: "Garden Center"
         fill_in "business[rank]", with: 4
         fill_in "business[big_company]", with: true
         click_on "Create Business"
 
 
-        expect(page).to have_content("New Name")
-        expect(page).to have_content(4)
-        expect(page).to have_content(true)
+        expect(page).to have_content("Garden Center")
       end
     end
   end
