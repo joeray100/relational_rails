@@ -1,5 +1,9 @@
+<a href="/businesses"> Return Home</a>
+
 <h1>Employee Information</h1>
 
-<li>Name:  <%=@employees.name%></li><br>
-<li>Hours Worked:  <%=@employees.hours_worked%></li><br>
-<li>Likes Job: <%=@employees.likes_job%></li><br>
+<li>Name:  <%=@employee.name%></li><br>
+<li>Hours Worked:  <%=@employee.hours_worked%></li><br>
+<li>Likes Job: <%=@employee.likes_job%></li><br>
+
+<%= link_to "Update", "/employees/#{@employee.id}/edit" %>

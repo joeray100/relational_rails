@@ -4,24 +4,21 @@ class BakeryPastriesController < ApplicationController
     @pastries = @bakery.pastries
   end
 
-  def show
-  end
-
   def new
+    @bakery = Bakery.find(params[:id])
+    @pastries = @bakery.pastries
   end
 
   def create
-    @bakery = Bakery.find(params[:id])
-    @pastries = @bakery.pastries
-    @pastries = Pastry.new(pastry_params)
-    @pastries.save!
+    bakery = Bakery.find(params[:id])
+    bakery.pastries.create!(pastry_params)
 
-    redirect_to '/bakeries/:id/pastries'
+    redirect_to "/bakeries/#{bakery.id}/pastries"
   end
 
   private
 
   def pastry_params
-    params.permit(:name, :price, :gluten)
+    params.permit(:name, :price, :gluten_free)
   end
 end

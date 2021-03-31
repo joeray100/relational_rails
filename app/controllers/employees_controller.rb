@@ -1,19 +1,30 @@
 class EmployeesController < ApplicationController
 
   def index
-    @employees = Employee.all
+    @employees = Employee.true_employees
   end
 
   def show
-    @business = Business.find(params[:id])
-    @employees = @business.employees.count
+    @employee = Employee.find(params[:id])
   end
 
   def new
   end
 
-  def employee_index
-    @business = Business.find(params[:id])
-    @employees = @business.employees.all
+  def edit
+    @employee = Employee.find(params[:id])
+  end
+
+  def update
+    employee =Employee.find(params[:id])
+    employee.update(update_params)
+    employee.save!
+    redirect_to "/employees/#{employee.id}"
+  end
+
+  private
+
+  def update_params
+    params.permit(:name, :hours_worked, :likes_job)
   end
 end
