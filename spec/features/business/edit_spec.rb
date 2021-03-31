@@ -11,12 +11,39 @@ require "rails_helper"
 RSpec.describe 'New Bussiness' do
   describe 'As a visitor' do
     describe 'When I visit the businesses index' do
-      it 'I can update a business' do
+      it 'I can update a business ' do
         yarn = Business.create!(name: 'Yarn boyz', rank: 3, big_company: true)
 
         visit "/businesses/#{yarn.id}"
 
         click_link 'Edit Business'
+
+        expect(current_path).to eq("/businesses/#{yarn.id}/edit")
+
+        fill_in 'Name', with: 'Aaron Carter'
+        fill_in 'Rank', with: 1
+        fill_in 'big_company', with: true
+        click_on 'Update'
+
+        expect(current_path).to eq("/businesses/#{yarn.id}")
+        expect(page).to have_content('Aaron Carter')
+        expect(page).to have_content(1)
+        expect(page).to have_content(true)
+        expect(page).to_not have_content("Yarn Boyz")
+      end
+    end
+  end
+end
+
+RSpec.describe 'Update Bussiness' do
+  describe 'As a visitor' do
+    describe 'When I visit the businesses index' do
+      it 'I can update a business next to its each business name ' do
+        yarn = Business.create!(name: 'Yarn boyz', rank: 3, big_company: true)
+
+        visit "/businesses"
+
+        click_link 'Edit'
 
         expect(current_path).to eq("/businesses/#{yarn.id}/edit")
 

@@ -20,4 +20,32 @@ describe "user creates a new employee" do
       end
     end
   end
+
+  # As a visitor
+  # When I visit the Parent's children Index Page
+  # Then I see a link to sort children in alphabetical order
+  # When I click on the link
+  # I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
+  RSpec.describe 'Update Business' do
+    describe 'As a visitor' do
+      describe 'When I visit the business index' do
+        it 'I can sort a bakery' do
+          business = Business.create!(name: "Name 1", rank: 1, big_company: true)
+          joe = business.employees.create!(name: "Joe", hours_worked: 4, likes_job: true)
+          olivia = business.employees.create!(name: "Olivia", hours_worked: 7, likes_job: true)
+
+          visit "/businesses/#{business.id}/employees"
+
+          click_link 'sort'
+
+          expect(current_path).to eq("/businesses/#{business.id}/employees")
+
+
+          expect(current_path).to eq("/businesses/#{business.id}/employees")
+          expect(page).to have_content(joe.name)
+          expect(page).to have_content(olivia.name)
+        end
+      end
+    end
+  end
 end
