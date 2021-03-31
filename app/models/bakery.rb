@@ -1,6 +1,9 @@
 class Bakery < ApplicationRecord
   has_many :pastries, dependent: :destroy
-  validates_presence_of :name, :rank, :open
+
+  validates_presence_of :name, :rank
+  validates :open, inclusion: [true,false]
+
   # validates :open,
   #           :presence => {:if=> :open.nil?}
   # default_scope {order(created_at: :desc)}

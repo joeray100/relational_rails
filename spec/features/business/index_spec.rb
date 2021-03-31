@@ -1,34 +1,33 @@
 require "rails_helper"
 
-describe "they visit businesses" do
-  it "displays all businesses" do
-    business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
-    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: true)
+  describe "they visit businesses" do
+    before :each do
+      @business1 = create(:business)
+      @business2 = create(:business)
+        visit businesses_path
+      end
+    it "displays all businesses" do
 
-    visit '/businesses'
 
-    expect(page).to have_content(business_1.name)
-    expect(page).to have_content(business_2.name)
-  end
-end
+      expect(page).to have_content(@business1.name)
+      expect(page).to have_content(@business2.name)
+    end
 
-describe "they visit businesses" do
-  it "displays businesses by created_at" do
-    business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
-    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: true)
 
-    visit '/businesses'
+  describe "they visit businesses" do
+    it "displays businesses by created_at" do
 
-    expect(page).to have_content(business_1.name)
-    expect(page).to have_content(business_2.name)
-    expect(page).to have_content(business_1.created_at)
-    expect(page).to have_content(business_2.created_at)
+      expect(page).to have_content(@business1.name)
+      expect(page).to have_content(@business1.created_at)
+      expect(page).to have_content(@business2.name)
+      expect(page).to have_content(@business2.created_at)
+    end
   end
 
   it "returns businesses in the order they were created at" do
 
     visit '/businesses'
-    business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
+    business_1 = Business.create!(name: "Name 1", rank: 1, big_company: false)
     business_2 = Business.create!(name: "Name 2", rank: 1, big_company: true)
     all = Business.all
 
@@ -42,5 +41,4 @@ describe "they visit businesses" do
     expect(page).to have_link("Pastries")
     expect(page).to have_link("Bakeries")
   end
-
 end

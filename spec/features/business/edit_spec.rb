@@ -11,52 +11,47 @@ require "rails_helper"
 RSpec.describe 'New Bussiness' do
   describe 'As a visitor' do
     describe 'When I visit the businesses index' do
-      it 'I can update a business ' do
-        yarn = Business.create!(name: 'Yarn boyz', rank: 3, big_company: true)
-
-        visit "/businesses/#{yarn.id}"
+      before :each do
+        @business1 = create(:business)
+          visit businesses_path
+      it 'It can update a business ' do
 
         click_link 'Edit Business'
 
-        expect(current_path).to eq("/businesses/#{yarn.id}/edit")
+        expect(current_path).to eq("/businesses/#{@business1.id}/edit")
 
         fill_in 'Name', with: 'Aaron Carter'
         fill_in 'Rank', with: 1
-        fill_in 'big_company', with: true
+        fill_in 'big_company', with: false
         click_on 'Update'
 
-        expect(current_path).to eq("/businesses/#{yarn.id}")
+        expect(current_path).to eq("/businesses/#{@business1.id}")
         expect(page).to have_content('Aaron Carter')
         expect(page).to have_content(1)
-        expect(page).to have_content(true)
+        expect(page).to have_content(false)
         expect(page).to_not have_content("Yarn Boyz")
-      end
     end
-  end
-end
 
-RSpec.describe 'Update Bussiness' do
-  describe 'As a visitor' do
-    describe 'When I visit the businesses index' do
-      it 'I can update a business next to its each business name ' do
-        yarn = Business.create!(name: 'Yarn boyz', rank: 3, big_company: true)
+    describe 'Update Bussiness' do
+      describe 'As a visitor' do
+        describe ' It update a business next to its each business name'  do
+            click_link 'Edit'
 
-        visit "/businesses"
+            expect(current_path).to eq("/businesses/#{@business1.id}/edit")
 
-        click_link 'Edit'
+            fill_in 'Name', with: 'Aaron Carter'
+            fill_in 'Rank', with: 1
+            fill_in 'big_company', with: true
+            click_on 'Update'
 
-        expect(current_path).to eq("/businesses/#{yarn.id}/edit")
-
-        fill_in 'Name', with: 'Aaron Carter'
-        fill_in 'Rank', with: 1
-        fill_in 'big_company', with: true
-        click_on 'Update'
-
-        expect(current_path).to eq("/businesses/#{yarn.id}")
-        expect(page).to have_content('Aaron Carter')
-        expect(page).to have_content(1)
-        expect(page).to have_content(true)
-        expect(page).to_not have_content("Yarn Boyz")
+            expect(current_path).to eq("/businesses/#{@business1.id}")
+            expect(page).to have_content('Aaron Carter')
+            expect(page).to have_content(1)
+            expect(page).to have_content(true)
+            expect(page).to_not have_content("Yarn Boyz")
+            end
+          end
+        end
       end
     end
   end

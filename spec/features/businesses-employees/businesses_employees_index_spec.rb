@@ -2,11 +2,11 @@ describe "user creates a new employee" do
   describe "they link from the businesses index" do
     describe "they fill in the appropriate fields" do
       it "creates a new employee for a specific business" do
-        @business = Business.create!(name: "Name 1", rank: 1, big_company: true)
-        visit "/businesses/#{@business.id}/employees"
+        @business1 = create(:business)
+        visit "/businesses/#{@business1.id}/employees"
         click_link "New Employee"
 
-        expect(current_path).to eq("/businesses/#{@business.id}/employees/new")
+        expect(current_path).to eq("/businesses/#{@business1.id}/employees/new")
 
         fill_in "name", with: "Richard"
         fill_in "hours_worked", with: 3
