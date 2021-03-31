@@ -10,16 +10,15 @@ Rails.application.routes.draw do
   get '/businesses/:id/employees/new', to: 'business_employees#new'
   post '/businesses/:id/employees', to: 'business_employees#create'
 
-
   get '/employees/:id', to: 'employees#show'
   get '/employees', to: 'employees#index'
   get '/employees/:id/edit', to: 'employees#edit'
   patch '/employees/:id', to: 'employees#update'
 
-  get '/bakeries/new', to: 'bakeries#new'
-  get '/bakeries/:id/edit', to: 'bakeries#edit'
   get '/bakeries', to: 'bakeries#index'
+  get '/bakeries/new', to: 'bakeries#new'
   get '/bakeries/:id', to: 'bakeries#show'
+  get '/bakeries/:id/edit', to: 'bakeries#edit'
   patch '/bakeries/:id', to: 'bakeries#update'
   post '/bakeries', to: 'bakeries#create'
 
