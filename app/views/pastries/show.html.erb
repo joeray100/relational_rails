@@ -1,6 +1,8 @@
-<a href="/businesses"> Return Home</a>
+<a href="/bakeries"> Return Home</a>
 
 <h1>Pastry Information</h1>
 <li>Name:  <%=@pastry.name%></li><br>
 <li>Rank:  <%=@pastry.gluten_free%></li><br>
 <li>Open: <%=@pastry.price%></li><br>
+
+<%= link_to "Edit", "/pastries/#{@pastry.id}/edit" %>
