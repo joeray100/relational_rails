@@ -7,5 +7,9 @@
   <h3>name: <%= employee.name %></h3>
   <h4>hours worked: <%= employee.hours_worked %></h4>
   <h4>likes job: <%= employee.likes_job%></h4>
+  <a href="/employees/<%=employee.id%>/edit ">Edit</a>
   <p>---------</p>
 <% end %>
+
+<a href= "/businesses/<%= @business.id %>/employees" > Sort </a><br/><br/>
+<%= link_to "New Employee", "/businesses/#{@business.id}/employees/new"%>

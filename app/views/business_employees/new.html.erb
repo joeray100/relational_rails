@@ -1,0 +1,10 @@
+<h1>New Employee</h1>
+<%= form_with url: "/businesses/#{@business.id}/employees", method: :post, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br><br>
+  <%= form.label :hours_worked%>
+  <%= form.text_field :hours_worked %><br><br>
+  <%= form.label :likes_job%>
+  <%= form.text_field :likes_job%><br><br>
+  <%= form.submit 'Create New Employee' %>
+<% end %>

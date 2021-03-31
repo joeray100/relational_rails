@@ -1,0 +1,10 @@
+<h1>Edit</h1>
+<%= form_with url: "/employees/#{@employee.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br><br>
+  <%= form.label :hours_worked%>
+  <%= form.text_field :hours_worked %><br><br>
+  <%= form.label :likes_job%>
+  <%= form.text_field :likes_job%><br><br>
+  <%= form.submit 'Update' %>
+<% end %>

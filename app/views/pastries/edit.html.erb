@@ -1,0 +1,10 @@
+<h1>Edit</h1>
+<%= form_with url: "/pastries/#{@pastry.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %><br><br>
+  <%= form.label :price%>
+  <%= form.text_field :price %><br><br>
+  <%= form.label :gluten_free %>
+  <%= form.text_field :gluten_free %><br><br>
+  <%= form.submit 'Update' %>
+<% end %>
