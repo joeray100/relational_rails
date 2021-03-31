@@ -3,7 +3,7 @@ require "rails_helper"
 describe "they visit businesses" do
   it "displays all businesses" do
     business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
-    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: false)
+    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: true)
 
     visit '/businesses'
 
@@ -15,7 +15,7 @@ end
 describe "they visit businesses" do
   it "displays businesses by created_at" do
     business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
-    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: false)
+    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: true)
 
     visit '/businesses'
 
@@ -29,7 +29,7 @@ describe "they visit businesses" do
 
     visit '/businesses'
     business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
-    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: false)
+    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: true)
     all = Business.all
 
     assert_operator all.index(business_2), :>, all.index(business_1)
@@ -42,5 +42,5 @@ describe "they visit businesses" do
     expect(page).to have_link("Pastries")
     expect(page).to have_link("Bakeries")
   end
-  
+
 end

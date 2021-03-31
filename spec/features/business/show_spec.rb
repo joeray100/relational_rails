@@ -8,7 +8,7 @@ require 'rails_helper'
 describe "business show id" do
   it "shows all parent attributes" do
     business_1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
-    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: false)
+    business_2 = Business.create!(name: "Name 2", rank: 1, big_company: true)
 
     visit "/businesses/#{business_1.id}"
     expect(page).to have_content(business_1.name)

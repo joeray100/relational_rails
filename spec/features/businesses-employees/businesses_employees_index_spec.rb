@@ -26,7 +26,7 @@ describe "user creates a new employee" do
   # Then I see a link to sort children in alphabetical order
   # When I click on the link
   # I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
-  RSpec.describe 'Update Business' do
+  describe 'Update Business' do
     describe 'As a visitor' do
       describe 'When I visit the business index' do
         it 'I can sort a bakery' do

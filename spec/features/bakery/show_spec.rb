@@ -8,7 +8,7 @@ describe "bakeries show id" do
   it "shows all parent attributes" do
     bakery_1 = Bakery.create!(name: "Name 1", rank: 1, open: true)
     bakery_2 = Bakery.create!(name: "Name 2", rank: 2, open: true)
-    bakery_3 = Bakery.create!(name: "Name 3", rank: 3, open: false)
+    bakery_3 = Bakery.create!(name: "Name 3", rank: 3, open: true)
 
     visit "/bakeries/#{bakery_1.id}"
     expect(page).to have_content(bakery_1.name)
@@ -29,7 +29,7 @@ end
     it "display all pastries related to a bakery" do
       bakery1 = Bakery.create!(name: "Name 1", rank: 1, open: true)
       cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
-      bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
+      bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: true)
 
       visit "/bakeries/#{bakery1.id}"
       expect(page).to have_content(bakery1.pastries.count)
@@ -41,10 +41,10 @@ end
     describe 'parents show page' do
     it 'see a link to take me to that parents child table name' do
       bakery1 = Bakery.create!(name: "Name 1", rank: 1, open: true)
-      bakery2 = Bakery.create!(name: "Name 2", rank: 2, open: false)
+      bakery2 = Bakery.create!(name: "Name 2", rank: 2, open: true)
       cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
-      bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
-      brownie= bakery2.pastries.create!(name: "Brownies", price: 3, gluten_free: false)
+      bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: true)
+      brownie= bakery2.pastries.create!(name: "Brownies", price: 3, gluten_free: true)
       visit "/bakeries/#{bakery1.id}"
       expect(page).to have_link("Menu")
     end

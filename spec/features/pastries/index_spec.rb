@@ -37,14 +37,14 @@ end
       it "shows Only records where the Boolean Column is true" do
       bakery1 = Bakery.create!(name: "Cupcakes", rank: 1, open: true)
       cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
-      bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
+      bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: true)
 
       visit "/pastries"
       expect(page).to have_content(cake.name)
       expect(page).to have_content(cake.price)
       expect(page).to have_content(cake.gluten_free)
-      expect(page).to_not have_content(bread.name)
-      expect(page).to_not have_content(bread.price)
-      expect(page).to_not have_content(bread.gluten_free)
+      expect(page).to have_content(bread.name)
+      expect(page).to have_content(bread.price)
+      expect(page).to have_content(bread.gluten_free)
   end
 end

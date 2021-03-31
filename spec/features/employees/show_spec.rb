@@ -6,7 +6,7 @@ describe "Show child table" do
     it "shows the entire child table with attributes" do
     business1 = Business.create!(name: "Name 1", rank: 1, big_company: true)
     bob = business1.employees.create!(name: "Bob", hours_worked: 4, likes_job: true)
-    george = business1.employees.create!(name: "George", hours_worked: 7, likes_job: false)
+    george = business1.employees.create!(name: "George", hours_worked: 7, likes_job: true)
 
     visit "/businesses/#{business1.id}/employees"
     expect(page). to have_content(bob.name)
