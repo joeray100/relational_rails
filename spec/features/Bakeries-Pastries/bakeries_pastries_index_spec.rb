@@ -21,7 +21,7 @@ describe "Bakeries Pastries index" do
     expect(page). to have_content(bread.gluten_free)
     expect(page).not_to have_content(brownie.name)
   end
-
+end
 
 # As a visitor
 # When I visit a Parent Childs Index page
@@ -53,6 +53,33 @@ describe "Bakeries Pastries index" do
           expect(page).to have_content(4)
           expect(page).to have_content(true)
         end
+      end
+    end
+  end
+
+# As a visitor
+# When I visit the Parent's children Index Page
+# Then I see a link to sort children in alphabetical order
+# When I click on the link
+# I'm taken back to the Parent's children Index Page where I see all of the parent's children in alphabetical order
+RSpec.describe 'Update Bakery' do
+  describe 'As a visitor' do
+    describe 'When I visit the bakeries index' do
+      it 'I can update a bakery' do
+        candy = Bakery.create!(name: 'Crazy Candy', rank: 3, open: true)
+        cake = candy.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
+        bread = candy.pastries.create!(name: "Kopf", price: 7, gluten_free: true)
+
+        visit "/bakeries/#{candy.id}/pastries"
+
+        click_link 'sort'
+
+        expect(current_path).to eq("/bakeries/#{candy.id}/pastries")
+
+
+        expect(current_path).to eq("/bakeries/#{candy.id}/pastries")
+        expect(page).to have_content(bread.name)
+        expect(page).to have_content(cake.name)
       end
     end
   end

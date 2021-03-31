@@ -42,4 +42,5 @@ describe "they visit businesses" do
     expect(page).to have_link("Pastries")
     expect(page).to have_link("Bakeries")
   end
+  
 end
