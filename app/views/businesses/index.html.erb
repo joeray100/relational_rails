@@ -10,7 +10,9 @@
     <li>
       <a href="/businesses/<%=business.id %>"><%=business.name%></a>
       <%=business.created_at%>
-      <a href="/businesses/<%=business.id %>/edit">Edit</a>
+      <a href="/businesses/<%=business.id %>/edit">Edit</a><br/>
+      <%= button_to "Delete", "/businesses/#{business.id}", method: :delete %>
+      <p>---------------------------</p>
     </li>
   <% end %>
 </ul>
