@@ -72,7 +72,7 @@ RSpec.describe 'Update Bakery' do
 
         visit "/bakeries/#{candy.id}/pastries"
 
-        click_link 'sort'
+        click_link 'Sort'
 
         expect(current_path).to eq("/bakeries/#{candy.id}/pastries")
 

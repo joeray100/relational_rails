@@ -13,8 +13,7 @@ describe "user creates a new business" do
         fill_in "business[rank]", with: 4
         fill_in "business[big_company]", with: true
         click_on "Create Business"
-
-
+        
         expect(page).to have_content("Garden Center")
       end
     end

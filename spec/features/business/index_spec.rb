@@ -8,11 +8,9 @@ require "rails_helper"
       end
     it "displays all businesses" do
 
-
       expect(page).to have_content(@business1.name)
       expect(page).to have_content(@business2.name)
     end
-
 
   describe "they visit businesses" do
     it "displays businesses by created_at" do

@@ -34,15 +34,15 @@ RSpec.describe 'New Bakery' do
   end
 end
 
-RSpec.describe 'Update Bakery' do
+
   describe 'As a visitor' do
     describe 'When I visit the bakeries index' do
-      it 'I can update a bakery' do
+      it ' It update a business next to its each business name' do
         candy = Bakery.create!(name: 'Crazy Candy', rank: 3, open: true)
+  
+        visit "/bakeries/#{candy.id}"
 
-        visit "/bakeries"
-
-        click_link 'Edit'
+        click_link 'Edit Bakery'
 
         expect(current_path).to eq("/bakeries/#{candy.id}/edit")
 
@@ -55,7 +55,6 @@ RSpec.describe 'Update Bakery' do
         expect(page).to have_content('No Candy')
         expect(page).to have_content(2)
         expect(page).to have_content(true)
-      end
     end
   end
 end

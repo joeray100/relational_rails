@@ -16,7 +16,7 @@ RSpec.describe 'New Bussiness' do
           visit businesses_path
       it 'It can update a business ' do
 
-        click_link 'Edit Business'
+        click_link "Edit"
 
         expect(current_path).to eq("/businesses/#{@business1.id}/edit")
 
@@ -30,8 +30,16 @@ RSpec.describe 'New Bussiness' do
         expect(page).to have_content(1)
         expect(page).to have_content(false)
         expect(page).to_not have_content("Yarn Boyz")
+        end
+      end
     end
+  end
 
+describe 'When I visit the businesses index' do
+  before :each do
+    @business1 = create(:business)
+      visit businesses_path
+  it 'It can update a business ' do
     describe 'Update Bussiness' do
       describe 'As a visitor' do
         describe ' It update a business next to its each business name'  do
@@ -49,10 +57,10 @@ RSpec.describe 'New Bussiness' do
             expect(page).to have_content(1)
             expect(page).to have_content(true)
             expect(page).to_not have_content("Yarn Boyz")
-            end
           end
         end
       end
     end
   end
+end
 end
