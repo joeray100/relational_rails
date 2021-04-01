@@ -11,5 +11,5 @@
   <p>---------</p>
 <% end %>
 
-<a href= "/businesses/<%= @business.id %>/employees" > Sort </a><br/><br/>
+<a href= "/businesses/<%= @business.id %>/employees?sort=alpha" > Sort </a><br/><br/>
 <%= link_to "New Employee", "/businesses/#{@business.id}/employees/new"%>

@@ -1,6 +1,6 @@
 class BakeriesController < ApplicationController
   def index
-    @bakeries = Bakery.order(created_at: :desc)
+    @bakeries = Bakery.most_recently_created
   end
 
   def show

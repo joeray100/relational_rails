@@ -2,7 +2,10 @@ class BusinessEmployeesController < ApplicationController
   def index
     @business = Business.find(params[:id])
     @employees = @business.employees
-    @employees = Employee.order_by_name
+    if params[:sort] == "alpha"
+      @employees = @employees.order_by_name
+    end
+
   end
 
   def new

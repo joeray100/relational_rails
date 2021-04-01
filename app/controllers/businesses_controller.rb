@@ -1,6 +1,6 @@
 class BusinessesController < ApplicationController
   def index
-    @businesses = Business.order(created_at: :desc)
+    @businesses = Business.most_recently_created
   end
 
   def show

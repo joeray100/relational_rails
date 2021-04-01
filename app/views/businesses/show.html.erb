@@ -6,6 +6,7 @@
 <li>Rank:  <%=@businesses.rank%></li><br>
 <li>Big Company: <%=@businesses.big_company%></li><br>
 <li>Number of Employees: <%=@businesses.employees.count%></li><br>
+<%= link_to "Delete Business", "/businesses/#{@businesses.id}", method: :delete %>
 
 <a href="/businesses"> Return Home</a>
 <a href="/businesses/<%=@businesses.id%>/edit">Edit Business</a>

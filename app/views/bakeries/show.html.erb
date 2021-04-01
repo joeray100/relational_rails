@@ -4,6 +4,7 @@
 <li>Menu Count:<%=@bakeries.pastries.count%></li><br>
 <li>Rank:  <%=@bakeries.rank%></li><br>
 <li>Open:  <%=@bakeries.open%></li><br>
+<%= link_to "Delete Bakery", "/bakeries/#{@bakeries.id}", method: :delete %>
 
 <a href="/bakeries"> Return Home</a>
 <a href="/bakeries/<%=@bakeries.id %>/edit">Edit Bakery</a>

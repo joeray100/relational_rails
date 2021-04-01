@@ -22,6 +22,11 @@ class EmployeesController < ApplicationController
     redirect_to "/employees/#{employee.id}"
   end
 
+  def destroy
+    Employee.destroy(params[:id])
+    redirect_to '/employees'
+  end
+
   private
 
   def update_params

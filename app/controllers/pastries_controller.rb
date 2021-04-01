@@ -22,6 +22,11 @@ class PastriesController < ApplicationController
     redirect_to "/pastries/#{pastry.id}"
   end
 
+  def destroy
+    Pastry.destroy(params[:id])
+    redirect_to '/pastries'
+  end
+
   private
 
   def update_params

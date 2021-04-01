@@ -2,7 +2,8 @@ class BakeryPastriesController < ApplicationController
   def index
     @bakery = Bakery.find(params[:id])
     @pastries = @bakery.pastries
-    @pastries = Pastry.order_by_name
+    @pastries = @pastries.order_by_name
+
   end
 
   def new
