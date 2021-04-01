@@ -4,5 +4,6 @@
 <li>Name:  <%=@pastry.name%></li><br>
 <li>Rank:  <%=@pastry.gluten_free%></li><br>
 <li>Open: <%=@pastry.price%></li><br>
+<%= link_to "Delete Pastry", "/pastries/#{@pastry.id}", method: :delete %>
 
 <%= link_to "Edit", "/pastries/#{@pastry.id}/edit" %>

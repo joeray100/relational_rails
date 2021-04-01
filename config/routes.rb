@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get '/businesses/:id/edit', to: 'businesses#edit'
   patch '/businesses/:id', to: 'businesses#update'
   post '/businesses', to: 'businesses#create'
+  delete '/businesses/:id', to: 'businesses#destroy'
 
   get '/businesses/:id/employees', to: 'business_employees#index'
   get '/businesses/:id/employees/new', to: 'business_employees#new'
@@ -15,6 +16,7 @@ Rails.application.routes.draw do
   get '/employees', to: 'employees#index'
   get '/employees/:id/edit', to: 'employees#edit'
   patch '/employees/:id', to: 'employees#update'
+  delete '/employees/:id', to: 'employees#destroy'
 
   get '/bakeries/new', to: 'bakeries#new'
   get '/bakeries/:id/edit', to: 'bakeries#edit'
@@ -22,6 +24,7 @@ Rails.application.routes.draw do
   get '/bakeries/:id', to: 'bakeries#show'
   patch '/bakeries/:id', to: 'bakeries#update'
   post '/bakeries', to: 'bakeries#create'
+  delete '/bakeries/:id', to: 'bakeries#destroy'
 
   get '/bakeries/:id/pastries', to: 'bakery_pastries#index'
   get '/bakeries/:id/pastries/new', to: 'bakery_pastries#new'
@@ -31,4 +34,5 @@ Rails.application.routes.draw do
   get '/pastries', to: 'pastries#index'
   get '/pastries/:id/edit', to: 'pastries#edit'
   patch '/pastries/:id', to: 'pastries#update'
+  delete '/pastries/:id', to: 'pastries#destroy'
 end
