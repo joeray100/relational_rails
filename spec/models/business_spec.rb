@@ -17,5 +17,4 @@ describe Business, type: :model do
     it "should return a list of businesses in order of created_at" do
       expect(Business.most_recently_created) == [@the_office, @parks_and_rec]
     end
-  end
-end
+

@@ -7,10 +7,10 @@ require 'rails_helper'
 describe "Bakeries Pastries index" do
   it "display all pastries related to a bakery" do
     bakery1 = Bakery.create!(name: "Name 1", rank: 1, open: true)
-    bakery2 = Bakery.create!(name: "Name 2", rank: 2, open: false)
+    bakery2 = Bakery.create!(name: "Name 2", rank: 2, open: true)
     cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
-    bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: false)
-    brownie= bakery2.pastries.create!(name: "Brownies", price: 3, gluten_free: false)
+    bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: true)
+    brownie= bakery2.pastries.create!(name: "Brownies", price: 3, gluten_free: true)
 
     visit "/bakeries/#{bakery1.id}/pastries"
     expect(page). to have_content(cake.name)

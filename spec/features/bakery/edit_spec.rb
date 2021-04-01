@@ -22,13 +22,13 @@ RSpec.describe 'New Bakery' do
 
         fill_in 'Name', with: 'No Candy'
         fill_in 'Rank', with: 2
-        fill_in 'Open', with: false
+        fill_in 'Open', with: true
         click_on 'Update'
 
         expect(current_path).to eq("/bakeries/#{candy.id}")
         expect(page).to have_content('No Candy')
         expect(page).to have_content(2)
-        expect(page).to have_content(false)
+        expect(page).to have_content(true)
       end
     end
   end
@@ -48,13 +48,13 @@ RSpec.describe 'Update Bakery' do
 
         fill_in 'Name', with: 'No Candy'
         fill_in 'Rank', with: 2
-        fill_in 'Open', with: false
+        fill_in 'Open', with: true
         click_on 'Update'
 
         expect(current_path).to eq("/bakeries/#{candy.id}")
         expect(page).to have_content('No Candy')
         expect(page).to have_content(2)
-        expect(page).to have_content(false)
+        expect(page).to have_content(true)
       end
     end
   end

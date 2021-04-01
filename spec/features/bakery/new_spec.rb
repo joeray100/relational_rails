@@ -11,7 +11,7 @@ describe "user creates a new bakery" do
 
         fill_in "bakery[name]", with: "Brians Donuts"
         fill_in "bakery[rank]", with: 4
-        fill_in "bakery[open]", with: true
+        fill_in "bakery[open]", with: false
 
         click_on "Create Bakery"
 

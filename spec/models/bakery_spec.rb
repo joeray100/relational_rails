@@ -3,6 +3,7 @@ describe Bakery, type: :model do
   describe "validations" do
     it {should validate_presence_of(:name)}
     it {should validate_presence_of(:rank)}
+
     # it {should validate_presence_of(:open)} No one could fix
   end
   describe 'relationships' do
