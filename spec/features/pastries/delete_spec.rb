@@ -11,15 +11,15 @@ RSpec.describe "deletes an existing pastry" do
         bakery1 = Bakery.create!(name: "Cupcakes", rank: 1, open: true)
         @cake = bakery1.pastries.create!(name: "Chocolate Cake", price: 4, gluten_free: true)
         @bread = bakery1.pastries.create!(name: "Kopf", price: 7, gluten_free: true)
-        visit "/pastries/#{@cake.id}"
-      it "deletes a pastry" do
+        visit "/pastries/#{@bread.id}"
+        it "deletes a pastry" do
 
-        click_link "Delete Pastry"
+          click_link "Delete Pastry"
 
-        expect(current_path).to eq("/pastries")
-        expect(page).to_not have_content(@cake.name)
-        expect(page).to_not have_content(@cake.price)
-        expect(page).to have_content(@bread.name)
+          expect(current_path).to eq("/pastries")
+          expect(page).to_not have_content(@cake.name)
+          expect(page).to_not have_content(@cake.price)
+          expect(page).to_not have_content(@bread.name)
         end
       end
     end

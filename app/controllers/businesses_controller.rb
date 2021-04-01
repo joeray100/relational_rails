@@ -23,7 +23,7 @@ class BusinessesController < ApplicationController
   end
 
   def update
-    business =Business.find(params[:id])
+    business = Business.find(params[:id])
     business.update(update_params)
     business.save!
     redirect_to "/businesses/#{business.id}"
