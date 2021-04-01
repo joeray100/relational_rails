@@ -12,6 +12,9 @@
       <a href="/bakeries/<%=bakery.id %>"><%=bakery.name%></a>
       <%=bakery.created_at%>
       <a href="/bakeries/<%=bakery.id %>/edit">Edit</a>
+      <%= link_to "Delete Bakery", "/bakeries", method: :delete %>
+      <%= button_to "Delete", "/bakeries/#{bakery.id}", method: :delete %>
+      <p>---------------------------</p>
     </li>
   <% end %>
 </ul>
