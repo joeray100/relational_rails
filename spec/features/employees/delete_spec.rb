@@ -13,7 +13,7 @@ RSpec.describe "deletes an existing employee" do
         @employee1 = create(:employee, business_id: @business1.id, likes_job: true)
         @employee2 = create(:employee, business_id: @business2.id, likes_job: true)
         visit "/employees/#{@employee1.id}"
-      it "deletes an employee" do
+        it "deletes an employee" do
 
         click_link "Delete Employee"
 
