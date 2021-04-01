@@ -5,6 +5,7 @@ class BusinessEmployeesController < ApplicationController
     if params[:sort] == "alpha"
       @employees = @employees.order_by_name
     end
+
   end
 
   def new
