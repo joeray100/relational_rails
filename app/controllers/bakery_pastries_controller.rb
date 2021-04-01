@@ -3,7 +3,6 @@ class BakeryPastriesController < ApplicationController
     @bakery = Bakery.find(params[:id])
     @pastries = @bakery.pastries
     @pastries = @pastries.order_by_name
-
   end
 
   def new

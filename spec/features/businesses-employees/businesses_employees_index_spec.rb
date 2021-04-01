@@ -36,7 +36,7 @@ describe "user creates a new employee" do
 
           visit "/businesses/#{business.id}/employees"
 
-          click_link 'sort'
+          click_link 'Sort'
 
           expect(current_path).to eq("/businesses/#{business.id}/employees")
 
